@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { utenteNewsLetter } from '../utenteNewsLetter';
-import { UTENTI } from '../mock-utenteNewsLetter';
+import { UtenteNewsLetterService } from '../utente-news-letter.service';
 
 @Component({
   selector: 'utente-news-letter',
@@ -9,19 +9,21 @@ import { UTENTI } from '../mock-utenteNewsLetter';
 })
 export class UtenteNewsLetterComponent implements OnInit {
   
-  //creo una variabile che prende l'array UTENTI
-  utenti=UTENTI;
+  //variabile utenti di tipo utenteNewsLetter
+  utenti : utenteNewsLetter[];
 
-  utenteSelezionato : utenteNewsLetter;
-
-  constructor() { }
+  //al costruttore gli viene passato il servizio
+  constructor(private utenteNewsLetterService: UtenteNewsLetterService) { }
 
   ngOnInit() {  
+    //in runtime viene caricata la lista utenti
+    this.getUtenti();
   }
   
-  //metodo che in input ha l'utente selezionato 
-  onSelect(utente: utenteNewsLetter): void {
-    this.utenteSelezionato = utente;
+  //metodo getUtenti che restituisce l'array di utenti
+  getUtenti(): void {
+    this.utenteNewsLetterService.getUtenti().subscribe(utenti => this.utenti = utenti);
   }
+
 
 }

@@ -1,4 +1,21 @@
-<p align="center"><a href="http://localhost:4200/"><img id="its" src="assets/itssys.jpg"></a></p>
-<br>
-<!--Inserisco il componente utente-news-letter-->
-<utente-news-letter></utente-news-letter>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <a class="navbar-brand" href="index.html"><img id="logo" src="../assets/its-img.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/dashboard">Dashboard <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/utenti">Vedi lista utenti</a>
+            </li>
+          </ul>
+        </div>
+ </nav>
+
+<!--Ho rimpiazzato il componente utente-news-letter con router outlet perche l'app visualizzerà gli utenti  solo quando lo utento lo accede-->
+<router-outlet></router-outlet>
+

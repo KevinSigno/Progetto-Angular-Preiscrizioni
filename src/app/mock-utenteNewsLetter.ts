@@ -1,15 +1,15 @@
 import { utenteNewsLetter } from './utenteNewsLetter';
 
-//creo un array di utenteNewsLetter con gli attributi email e privacy
+//creo un array di utenteNewsLetter con gli attributi id, email e privacy
 export const UTENTI: utenteNewsLetter[] = [
-  {  email: 'signokevin123@gmail.com', privacy: true },
-  {  email: 'alessioromele@gmail.com', privacy: true },
-  {  email: 'ezioraciti234@gmail.com', privacy: true },
-  {  email: 'aglihoxhaharn@gmail.com', privacy: true },
-  {  email: 'danieleprunie@gmail.com', privacy: false },
-  {  email: 'matteopirovan@gmail.com', privacy: true },
-  {  email: 'lorisdefra123@gmail.com', privacy: true },
-  {  email: 'alessioolivie@gmail.com', privacy: true },
-  {  email: 'alessioolivie@gmail.com', privacy: true },
-  {  email: 'jacopogaletti@gmail.com', privacy: false }
+  {  id:1, email: 'signokevin123@gmail.com', privacy: true },
+  {  id:2, email: 'alessioromele@gmail.com', privacy: true },
+  {  id:3, email: 'ezioraciti234@gmail.com', privacy: true },
+  {  id:4, email: 'aglihoxhaharn@gmail.com', privacy: true },
+  {  id:5, email: 'danieleprunie@gmail.com', privacy: false },
+  {  id:6, email: 'matteopirovan@gmail.com', privacy: true },
+  {  id:7, email: 'lorisdefra123@gmail.com', privacy: true },
+  {  id:8, email: 'alessioolivie@gmail.com', privacy: true },
+  {  id:9, email: 'alessioolivie@gmail.com', privacy: true },
+  {  id:10, email: 'jacopogaletti@gmail.com', privacy: false }
 ];

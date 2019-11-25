@@ -1,0 +1,68 @@
+/* DashboardComponent's private CSS styles */
+[class*='col-'] {
+    float: center;
+    padding-left:20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+  [class*='col-']:last-of-type {
+    padding-right: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  *, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  h3 {
+    text-align: center;
+    margin-bottom: 0;
+  }
+  h4 {
+    position: relative;
+  }
+  .grid {
+   margin:3%;
+  }
+  .col-1-4 {
+    width: 10%;
+  }
+  .module {
+    padding: 5px;
+    text-align: center;
+    color: #eee;
+    max-height: 70px;
+    min-width: 70px;
+    background-color: #212529;
+    border-radius: 7px;
+    
+  }
+  .module:hover {
+    background-color: rgb(197, 196, 196);
+    cursor: pointer;
+    color: #223e4b;
+  }
+  .grid-pad {
+    padding: 10px 0;
+    width: 45%;
+    position: absolute;
+    left: 25%;
+  }
+  .grid-pad > [class*='col-']:last-of-type {
+    padding-right: 20px;
+  }
+  @media (max-width: 600px) {
+    .module {
+      font-size: 10px;
+      max-height: 75px; }
+  }
+  @media (max-width: 1024px) {
+    .grid {
+      margin: 0;
+    }
+    .module {
+      min-width: 60px;
+    }
+  }

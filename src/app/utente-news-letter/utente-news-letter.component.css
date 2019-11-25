@@ -3,7 +3,7 @@
   margin: 0 0 3em 0;
   list-style-type: none;
   padding: 0;
-  width: 15em;
+  width: 30em;
 }
 
 .utenti li {
@@ -16,6 +16,7 @@
   height: 1.6em;
   border-radius: 4px;
   box-shadow: 3px 5px 0 rgba(192, 192, 192, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom:25px;
 }
 
 .utenti li:hover {
@@ -39,12 +40,12 @@
   font-size: small;
   color: white;
   padding: 0.7em 0.7em 0 0.7em;
-  background-color: #405061;
+  background-color: #212529;
   line-height: 1em;
   position: relative;
   left: -1px;
   top: -5px;
-  height: 1.8em;
+  height: 2em;
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
 }
@@ -52,17 +53,16 @@
 #span-privacy {
   color: black;
   font-weight: bolder;
+  position: absolute;
+  left:90%;
+  top:5%;
 }
 
-#content-modifica {
+#span-email{
+  color:black;
+  font-weight: bolder;
   position: absolute;
-  left: 40%;
-  top: 45%;
-  background-color: #405061;
-  padding: 2em 4em;
-  box-shadow: 4px 10px 0 rgba(192, 192, 192, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 12px;
-  color: white;
+  top:5%;
 }
 
 label {
@@ -73,10 +73,9 @@ label {
   margin-bottom: 10px;
 }
 
-#input-email {
-  border: 2px solid #ccc !important;
+.container-main{
+  position: absolute;
+  left:35%;
+  bottom:-27%;
 }
 
-h3 {
-  margin-left: 7px;
-}

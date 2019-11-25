@@ -1,0 +1,38 @@
+<!--Uso ngif per controllare quale utente viene selezionato-->
+<div *ngIf="utente">
+<div id="content-modifica">
+    <h2>Modifica dati preiscritto ID {{utente.id}}: </h2>
+    <br>
+  <!--Faccio un controllo che l'email non sia vuota se non è vuota non va nell'else-->
+  <div *ngIf="utente.email!=''; else emailnull">
+    <div class="content-email">
+          <input type="email" [(ngModel)]="utente.email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" maxlength="38" placeholder="Inserisci l'email">
+    </div>
+  </div>
+  <br>
+  <!--Se l'email è vuota viene utilizzato questo template-->
+  <ng-template #emailnull>
+    <div class="content-email">
+      <input type="email" style="background-color:red" [(ngModel)]="utente.email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" maxlength="38" placeholder="Inserisci l'email">
+    </div>
+  </ng-template>
+    <!--Controllo della privacy se non è stata accettata-->
+    <div *ngIf="utente.privacy!=false; else privacyfalse">
+      <label>Privacy:
+        <input [(ngModel)]="utente.privacy" type="checkbox" placeholder="privacy"/><p id="privacy-true">Accettata</p>
+      </label>
+    </div>
+    <!--Se la privacy è false viene utilizzato questo template-->
+    <ng-template #privacyfalse>
+        <div>
+            <label>Privacy:
+              <input id="input-privacy-null" [(ngModel)]="utente.privacy" type="checkbox" placeholder="privacy"/><p id="privacy-false">Non accettata</p>
+            </label>
+        </div>
+    </ng-template>
+</div>
+</div>
+<!--Tasto per tornare indietro-->
+<div id="back">
+    <button (click)="goBack()" data-toggle="tooltip" title="indietro" data-placement="bottom">Torna indietro</button>
+</div>

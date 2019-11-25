@@ -1,22 +1,96 @@
-<h3>Lista preiscritti(cliccarne uno per modificarne i dati):</h3>
-<ul class="utenti">
-<!--Uso ngfor per scorrere il vettore  di utenti & gli aggiungo il metodo click che punta alla funzione dell'utente selezionato-->
-  <li *ngFor="let utente of utenti" (click)="onSelect(utente)" [class.selected]="utente === utenteSelezionato">
-    <span class="badge">{{utente.email}}</span> <span id="span-privacy">{{utente.privacy}}</span>
-  </li>
-</ul>
+<div class="container-main">
+      <h1 class="display-4" align="center">Lista preiscritti</h1>
+      <p class="lead" align="center">cliccarne uno per modificarne i dati</p>
+      <ul class="utenti">
+          <!--Uso ngfor per scorrere il vettore  di utenti & gli aggiungo il metodo click che punta alla funzione dell'utente selezionato-->
+            <li *ngFor="let utente of utenti">
+              <a routerLink="/detail/{{utente.id}}">
+                <span class="badge">{{utente.id}}</span> <span id="span-email">{{utente.email}}</span> <span id="span-privacy">{{utente.privacy}}</span>
+              </a>
+            </li>
+          </ul>
+    </div>
 
-<!--Uso ngif per controllare quale utente viene selezionato-->
-<div id="content-modifica" *ngIf="utenteSelezionato">
-    <h2>Modifica dati preiscritto:</h2>
-    <div class="content-email">
-        <label>Email:
-          <input id="input-email" [(ngModel)]="utenteSelezionato.email" placeholder="email"/>
-        </label>
-    </div>
-    <div>
-      <label>Privacy:
-        <input [(ngModel)]="utenteSelezionato.privacy" type="checkbox" placeholder="privacy"/>
-      </label>
-    </div>
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
